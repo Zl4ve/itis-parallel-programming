@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
         std::cout << std::endl;
     }
 
-    MPI_Scatter(&x[0], part_size, MPI_INT, &recieved_x[0], part_size, MPI_INT, 0, MPI_COMM_WORLD);
+    MPI_Scatter(x, part_size, MPI_INT, recieved_x, part_size, MPI_INT, 0, MPI_COMM_WORLD);
 
     int max = -1;
 
